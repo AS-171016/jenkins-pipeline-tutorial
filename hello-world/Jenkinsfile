@@ -1,20 +1,6 @@
 pipeline {
     agent any 
     stages {
-        stage('Non-parallel stage'){
-            steps{
-            echo 'this stage will run first'
-            }
-        }
-        stage ('Phase'){
-            options{
-                timeout(time: 1, unit:'HOURS')
-            }
-            steps
-            {
-                echo 'Phase'
-            }
-        }
         stage('Static Analysis') {
             steps {
                 echo 'Run the static analysis to the code'
