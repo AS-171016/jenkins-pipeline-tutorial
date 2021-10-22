@@ -3,17 +3,20 @@ pipeline {
     stages {
         stage('Static Analysis') {
             steps {
-                echo 'Run the static analysis to the code' 
+                echo 'Run the static analysis to the code'
+                echo 'Riemann is great'
             }
         }
         stage('Compile') {
             steps {
                 echo 'Compile the source code' 
+                echo 'von Neumann is great'
             }
         }
         stage('Security Check') {
             steps {
                 echo 'Run the security check against the application' 
+                echo 'Nash is great'
             }
         }
         stage('Run Unit Tests') {
